@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombline Shop</title>
+    <link rel="stylesheet" href="SiteStyle/global.css">
+</head>
+<body>
+    <h1>Today's Shop</h1>
+    <div class="shop">
+        <img id="pc1">
+        <img id="pc2">
+        <img id="pc3">
+    </div>
+<script>
+    function setCardImage(imgId, cardName) {
+        const img = document.getElementById(imgId);
+        img.src = `/playercards/${cardName}.png`;
+        img.onerror = () => {
+            img.src = '/playercards/Lost Media.png';
+        };
+    }
+    fetch("http://localhost:8000/api/shop")
+        .then(res => res.json())
+        .then(data => {
+            setCardImage("pc1", data.pc1);
+            setCardImage("pc2", data.pc2);
+            setCardImage("pc3", data.pc3);
+        })
+</script>
+
