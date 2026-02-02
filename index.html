@@ -6,8 +6,18 @@
     <title>Bombline Shop</title>
     <link rel="stylesheet" href="SiteStyle/global.css">
 </head>
+<audio id="bgm" loop>
+  <source src="SiteStyle/Audio/Bombline Main Theme.mp3" type="audio/mpeg">
+</audio>
 <body>
-    <h1>Today's Shop</h1>
+    <header>
+        <label class="burger" for="burger">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
     <div class="shop">
         <img id="pc1">
         <img id="pc2">
@@ -28,5 +38,14 @@
             setCardImage("pc2", data.pc2);
             setCardImage("pc3", data.pc3);
         })
+
+    const audio = document.getElementById("bgm");
+
+    document.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.volume = 0.4;
+        audio.play();
+    }
+    }, { once: true });
 </script>
 
