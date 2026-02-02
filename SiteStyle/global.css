@@ -5,6 +5,11 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    background-image: url('/SiteStyle/SiteImages/FadeBlackToGrey.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #333;
 }
 .shop {
     display: flex;
