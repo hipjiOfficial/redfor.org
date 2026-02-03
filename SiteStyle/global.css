@@ -1,46 +1,53 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    /*background-image: url('SiteImages/FadeBlackToGrey.png');*/
-    background-size: cover;
-    background-position: center;
-    background-color: #000000;
-    color: #eba61b;
-    font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  /*background-image: url('SiteImages/FadeBlackToGrey.png');*/
+  background-size: cover;
+  background-position: center;
+  background-color: #000000;
+  color: #eba61b;
+  font-family: monospace;
 }
 header {
-    background-color: #000000;
-    color: white;
-    padding: 15px 20px;
-    text-align: left;
-    font-size: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    outline: 2px solid #eba61b;
+  background-color: #000000;
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  outline: 2px solid #eba61b;
 }
 .shop {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 40px;
+}
+.shop img {
+  width: 640px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid #eba61b;
+  border-radius: 0px;
 }
 nav {
-    display: flex;
-    gap: 15px;
-    color: #eba61b;
-    font-family: monospace;
+  display: flex;
+  gap: 15px;
+  color: #eba61b;
+  font-family: monospace;
 }
 a {
-    color: #eba61b;
-    text-decoration: none;
+  color: #eba61b;
+  text-decoration: none;
 }
 /* From Uiverse.io by Cevorob */ 
 .burger {
@@ -66,7 +73,7 @@ a {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: .10s ease-in-out;
 }
 
 .burger span:nth-of-type(1) {
@@ -101,4 +108,42 @@ a {
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
+}
+.menu-card {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 180px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  outline: #eba61b solid 2px;
+}
+.menu-card a {
+  display: block;
+  width: 100%;
+}
+.menu-card.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.menu-card a:hover {
+  background: rgba(235, 166, 27, 0.15);
+}
+.shop-timer {
+  font-size: 14px;
+  color: #eba61b;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.shop-timer span {
+  font-weight: 700;
 }

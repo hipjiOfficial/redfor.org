@@ -17,13 +17,24 @@
             <span></span>
             <span></span>
         </label>
-    </header>
+
+    <div class="menu-card" id="menu">
+      <a href="/home">Home</a>
+      <a href="/dailyshop">Daily Shop</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/about">About</a>
+    </div>
+  </header>
     <div class="shop">
         <img id="pc1">
         <img id="pc2">
         <img id="pc3">
     </div>
+    <div class="shop-timer">
+        Next shop in: <span id="countdown">00:00</span>
+    </div>
 <script>
+    /* fetching images */
     function setCardImage(imgId, cardName) {
         const img = document.getElementById(imgId);
         img.src = `/playercards/${cardName}.png`;
@@ -38,14 +49,57 @@
             setCardImage("pc2", data.pc2);
             setCardImage("pc3", data.pc3);
         })
-
+    /* background music test */
     const audio = document.getElementById("bgm");
 
     document.addEventListener("click", () => {
     if (audio.paused) {
-        audio.volume = 0.4;
-        audio.play();
-    }
+            audio.volume = 0.4;
+            audio.play();
+        }
     }, { once: true });
+
+    /* burger menu */
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+
+    /* countdown timer */
+    function getNextShopTimeUTC() {
+        const now = new Date();
+        const next = new Date(Date.UTC(
+            now.getUTCFullYear(),
+            now.getUTCMonth(),
+            now.getUTCDate(),
+            0, 0, 0
+        ));
+        if (now >= next) {
+            next.setUTCDate(next.getUTCDate() + 1);
+        }
+        return next;
+    }
+
+    function updateCountdown() {
+        const el = document.getElementById("countdown");
+        const now = new Date();
+        const next = getNextShopTimeUTC();
+
+        let diff = Math.floor((next - now) / 1000);
+        if (diff < 0) diff = 0;
+        const h = Math.floor(diff / 3600);
+        const m = Math.floor((diff % 3600) / 60);
+        const s = diff % 60;
+
+        el.textContent =
+            `${h.toString().padStart(2,"0")}:` +
+            `${m.toString().padStart(2,"0")}:` +
+            `${s.toString().padStart(2,"0")}`;
+    }
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 
