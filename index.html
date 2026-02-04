@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bombline Shop</title>
+    <title>redfor.org - daily shop</title>
     <link rel="stylesheet" href="SiteStyle/global.css">
 </head>
 <audio id="bgm" loop>
@@ -52,15 +52,10 @@
             setCardImage("pc2", data.pc2);
             setCardImage("pc3", data.pc3);
         })
-    /* background music test */
+    /* background music */
     const audio = document.getElementById("bgm");
-
-    document.addEventListener("click", () => {
-    if (audio.paused) {
-            audio.volume = 0.4;
-            audio.play();
-        }
-    }, { once: true });
+    audio.volume = 0.4;
+    audio.play();
 
     /* burger menu */
     const burger = document.getElementById("burger");
