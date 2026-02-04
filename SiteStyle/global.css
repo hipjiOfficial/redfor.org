@@ -12,6 +12,27 @@ body {
   color: #eba61b;
   font-family: monospace;
 }
+.about-page-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #000000;
+  color: #eba61b;
+  font-family: monospace;
+}
+.sketch {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  z-index: -1000;
+}
 header {
   background-color: #000000;
   color: white;
@@ -47,7 +68,7 @@ nav {
 }
 a {
   color: #eba61b;
-  text-decoration: none;
+  text-decoration: underline;
 }
 /* From Uiverse.io by Cevorob */ 
 .burger {
@@ -57,7 +78,7 @@ a {
   background: transparent;
   cursor: pointer;
   display: block;
-}
+} 
 
 .burger input {
   display: none;
@@ -125,6 +146,7 @@ a {
   opacity: 0;
   transition: opacity 0.2s ease;
   outline: #eba61b solid 2px;
+  pointer-events: none;
 }
 .menu-card a {
   display: block;
@@ -146,4 +168,12 @@ a {
 }
 .shop-timer span {
   font-weight: 700;
+}
+.titlepath {
+  font-size: 14px;
+  color: #eba61b;
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 500;
+  display: inline-block;
 }
