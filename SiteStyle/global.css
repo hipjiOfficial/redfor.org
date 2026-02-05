@@ -177,3 +177,12 @@ a {
   font-weight: 500;
   display: inline-block;
 }
+#typed-text::after {
+  content: "_";
+  animation: blink 1s steps(1) infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

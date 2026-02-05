@@ -18,16 +18,19 @@
             <span></span>
         </label>
     <div class="menu-card" id="menu">
-      <a href="/home">Home</a>
-      <a href="index.html">Daily Shop</a>
+      <a href="/home.html">Home</a>
+      <a href="/index.html">Daily Shop</a>
       <a href="/gallery">Gallery</a>
-      <a href="/about">About</a>
+      <a href="/about.html">About</a>
     </div>
-    <h4 class="titlepath">agent@framework:/home</h4>
+    <h4 class="titlepath" id="typed-text" data-text="agent@framework:/home"></h4>
   </header>
     <div class="homepage-content">
-        <h2>Welcome agent.</h2>
-        <p></p>
+        <h2>Welcome.</h2>
+        <p>Redfor.org is the easiest way to access field information from anywhere on Earth.</p>
+        <p>We hope you enjoy using our services, agent.</p>
+    </div>
+    <div class="homepage-navigation">
     </div>
 <footer>
 
@@ -45,6 +48,25 @@
 
     burger.addEventListener("click", () => {
         menu.classList.toggle("open");
+    });
+    /* typed text animation */
+    function typeText(element, text, speed = 50) {
+        element.textContent = "";
+        let i = 0;
+
+        const interval = setInterval(() => {
+            element.textContent += text[i];
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+            }
+        }, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("typed-text");
+        const text = el.dataset.text;
+        typeText(el, text, 10);
     });
 </script>
 
