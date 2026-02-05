@@ -25,6 +25,20 @@ body {
   color: #eba61b;
   font-family: monospace;
 }
+.gallery-page-body {
+  background-image: url('/SiteImages/pageUnderConstruction.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #eba61b;
+  font-family: monospace;
+}
 .sketch {
   position: fixed;
   bottom: 10px;
@@ -69,6 +83,13 @@ nav {
 a {
   color: #eba61b;
   text-decoration: underline;
+}
+.homepage-navigation {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  align-items: flex-start;
+  text-align: center;
 }
 /* From Uiverse.io by Cevorob */ 
 .burger {
