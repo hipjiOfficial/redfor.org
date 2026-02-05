@@ -26,7 +26,7 @@ body {
   font-family: monospace;
 }
 .gallery-page-body {
-  background-image: url('/SiteImages/pageUnderConstruction.png');
+  background-image: url('SiteImages/pageUnderConstruction.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
