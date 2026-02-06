@@ -91,6 +91,12 @@ a {
   align-items: flex-start;
   text-align: center;
 }
+.about-image {
+  width: 20px;
+  border: 2px solid #eba61b;
+  border-radius: 12px;
+  margin: 20px 0;
+}
 /* From Uiverse.io by Cevorob */ 
 .burger {
   position: relative;
