@@ -40,11 +40,24 @@
     /* fetching images */
     function setCardImage(imgId, cardName) {
         const img = document.getElementById(imgId);
-        img.src = `/playercards/${cardName}.png`;
-        img.onerror = () => {
-            img.src = '/playercards/Lost Media.png';
-        };
+        const basePath = `/playercards/${cardName}`;
+        const extensions = ["png", "gif"];
+
+        let i = 0;
+
+        function tryLoad() {
+            if (i >= extensions.length) {
+                img.src = '/playercards/Lost Media.png';
+                return;
+            }
+            img.src = `${basePath}.${extensions[i]}`;
+            i++;
+        }
+
+        img.onerror = tryLoad;
+        tryLoad();
     }
+
     fetch("http://localhost:8000/api/shop")
         .then(res => res.json())
         .then(data => {
