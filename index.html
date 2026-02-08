@@ -70,12 +70,30 @@
     audio.volume = 0.4;
     audio.play();
 
+    /* ui sounds */
+    const burgerClickSound = new Audio("/SiteStyle/Audio/Select_2.mp3");
+    burgerClickSound.volume = 0.6;
+    burgerClickSound.preload = "auto";
+
+    const navHoverSound = new Audio("/SiteStyle/Audio/Hover.mp3");
+    navHoverSound.volume = 0.4;
+    navHoverSound.preload = "auto";
+
+    document.querySelectorAll(".menu-card a").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            navHoverSound.currentTime = 0;
+            navHoverSound.play();
+        });
+    });
+
     /* burger menu */
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
 
     burger.addEventListener("click", () => {
         menu.classList.toggle("open");
+        burgerClickSound.currentTime = 0;
+        burgerClickSound.play();
     });
 
     /* typed text animation */
