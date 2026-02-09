@@ -209,7 +209,49 @@ a {
   animation: blink 1s steps(1) infinite;
   margin-left: 4px;
 }
-
 @keyframes blink {
   50% { opacity: 0; }
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.request-card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 8px;
+    width: 320px;
+    color: white;
+    box-shadow: 0 0 20px rgba(235, 166, 27, 0.3);
+}
+
+.request-card input,
+.request-card select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    background: #111;
+    border: 1px solid #eba61b;
+    color: white;
+}
+
+.request-card button {
+    width: 100%;
+    padding: 10px;
+    background: #eba61b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.request-card button:hover {
+    background: #eba61b;
+}
+
+#status-message {
+    margin-top: 10px;
+    font-size: 14px;
 }
