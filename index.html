@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>redfor.org - daily shop</title>
-    <link rel="stylesheet" href="/SiteStyle/global.css">
+    <title>redfor.org - home</title>
+    <link rel="stylesheet" href="SiteStyle/global.css">
 </head>
 <audio id="bgm" loop>
   <source src="SiteStyle/Audio/Bombline Main Theme.mp3" type="audio/mpeg">
@@ -18,57 +18,36 @@
             <span></span>
         </label>
     <div class="menu-card" id="menu">
-        <a href="/home.html">Home</a>
-        <a href="/index.html">Daily Shop</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/about.html">About</a>
+      <a href="/index.html">Home</a>
+      <a href="/shop.html">Daily Shop</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/about.html">About</a>
     </div>
-    <h4 class="titlepath" id="typed-text" data-text="agent@framework:/home/dailyshop"></h4>
+    <h4 class="titlepath" id="typed-text" data-text="agent@framework:/home"></h4>
   </header>
-    <div class="shop">
-        <img id="pc1">
-        <img id="pc2">
-        <img id="pc3">
+    <div class="homepage-content">
+        <h2>Welcome.</h2>
+        <p>Redfor.org is the easiest way to access field information from anywhere on Earth.</p>
+        <p>We hope you enjoy using our services, agent.</p>
+        <p>More features coming soon! Including integrating redfor bot to notify you when specific playercards are in the shop.</p>
     </div>
-    <div class="shop-timer">
-        Next shop in: <span id="countdown">00:00</span>
+    <div class="homepage-navigation">
+        <a href="/shop.html" class="nav-card">
+            <h3>Daily Shop</h3>
+        <a href="/gallery.html" class="nav-card">
+            <h3>Playercard Gallery</h3>
+        <a href="/about.html" class="nav-card">
+            <h3>About</h3>
     </div>
 <footer>
+
 </footer>
 </body>
 <script>
-    /* fetching images */
-    function setCardImage(imgId, cardName) {
-        const img = document.getElementById(imgId);
-        const basePath = `/playercards/${cardName}`;
-        const extensions = ["png", "gif"];
-
-        let i = 0;
-
-        function tryLoad() {
-            if (i >= extensions.length) {
-                img.src = '/playercards/Lost Media.png';
-                return;
-            }
-            img.src = `${basePath}.${extensions[i]}`;
-            i++;
-        }
-
-        img.onerror = tryLoad;
-        tryLoad();
-    }
-
-    fetch("http://localhost:8000/api/shop")
-        .then(res => res.json())
-        .then(data => {
-            setCardImage("pc1", data.pc1);
-            setCardImage("pc2", data.pc2);
-            setCardImage("pc3", data.pc3);
-        })
-    /* background music */
+    /* background music
     const audio = document.getElementById("bgm");
     audio.volume = 0.4;
-    audio.play();
+    audio.play();*/
 
     /* ui sounds */
     const burgerClickSound = new Audio("/SiteStyle/Audio/Select_2.mp3");
@@ -115,39 +94,5 @@
         const text = el.dataset.text;
         typeText(el, text, 10);
     });
-    /* countdown timer */
-    function getNextShopTimeUTC() {
-        const now = new Date();
-        const next = new Date(Date.UTC(
-            now.getUTCFullYear(),
-            now.getUTCMonth(),
-            now.getUTCDate(),
-            0, 0, 0
-        ));
-        if (now >= next) {
-            next.setUTCDate(next.getUTCDate() + 1);
-        }
-        return next;
-    }
-
-    function updateCountdown() {
-        const el = document.getElementById("countdown");
-        const now = new Date();
-        const next = getNextShopTimeUTC();
-
-        let diff = Math.floor((next - now) / 1000);
-        if (diff < 0) diff = 0;
-        const h = Math.floor(diff / 3600);
-        const m = Math.floor((diff % 3600) / 60);
-        const s = diff % 60;
-
-        el.textContent =
-            `${h.toString().padStart(2,"0")}:` +
-            `${m.toString().padStart(2,"0")}:` +
-            `${s.toString().padStart(2,"0")}`;
-    }
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
 </script>
 

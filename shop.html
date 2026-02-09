@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redfor.org - daily shop</title>
+    <link rel="stylesheet" href="/SiteStyle/global.css">
+</head>
+<audio id="bgm" loop>
+  <source src="SiteStyle/Audio/Bombline Main Theme.mp3" type="audio/mpeg">
+</audio>
+<body>
+    <header>
+        <label class="burger" for="burger">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    <div class="menu-card" id="menu">
+        <a href="/index.html">Home</a>
+        <a href="/shop.html">Daily Shop</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/about.html">About</a>
+    </div>
+    <h4 class="titlepath" id="typed-text" data-text="agent@framework:/home/dailyshop"></h4>
+  </header>
+    <div class="shop">
+        <img id="pc1">
+        <img id="pc2">
+        <img id="pc3">
+    </div>
+    <div class="shop-timer">
+        Next shop in: <span id="countdown">00:00</span>
+    </div>
+<footer>
+</footer>
+</body>
+<script>
+    /* fetching images */
+    function setCardImage(imgId, cardName) {
+        const img = document.getElementById(imgId);
+        const basePath = `/playercards/${cardName}`;
+        const extensions = ["png", "gif"];
+
+        let i = 0;
+
+        function tryLoad() {
+            if (i >= extensions.length) {
+                img.src = '/playercards/Lost Media.png';
+                return;
+            }
+            img.src = `${basePath}.${extensions[i]}`;
+            i++;
+        }
+
+        img.onerror = tryLoad;
+        tryLoad();
+    }
+
+    fetch("https://redfororg-backend-production.up.railway.app/api/shop") /* dont forget to change this to api.redfor.org */
+        .then(res => res.json())
+        .then(data => {
+            setCardImage("pc1", data.pc1);
+            setCardImage("pc2", data.pc2);
+            setCardImage("pc3", data.pc3);
+        })
+    /* background music */
+    const audio = document.getElementById("bgm");
+    audio.volume = 0.4;
+    audio.play();
+
+    /* ui sounds */
+    const burgerClickSound = new Audio("/SiteStyle/Audio/Select_2.mp3");
+    burgerClickSound.volume = 0.6;
+    burgerClickSound.preload = "auto";
+
+    const navHoverSound = new Audio("/SiteStyle/Audio/Hover.mp3");
+    navHoverSound.volume = 0.4;
+    navHoverSound.preload = "auto";
+
+    document.querySelectorAll(".menu-card a").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            navHoverSound.currentTime = 0;
+            navHoverSound.play();
+        });
+    });
+
+    /* burger menu */
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        burgerClickSound.currentTime = 0;
+        burgerClickSound.play();
+    });
+
+    /* typed text animation */
+    function typeText(element, text, speed = 50) {
+        element.textContent = "";
+        let i = 0;
+
+        const interval = setInterval(() => {
+            element.textContent += text[i];
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+            }
+        }, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("typed-text");
+        const text = el.dataset.text;
+        typeText(el, text, 10);
+    });
+    /* countdown timer */
+    function getNextShopTimeUTC() {
+        const now = new Date();
+        const next = new Date(Date.UTC(
+            now.getUTCFullYear(),
+            now.getUTCMonth(),
+            now.getUTCDate(),
+            0, 0, 0
+        ));
+        if (now >= next) {
+            next.setUTCDate(next.getUTCDate() + 1);
+        }
+        return next;
+    }
+
+    function updateCountdown() {
+        const el = document.getElementById("countdown");
+        const now = new Date();
+        const next = getNextShopTimeUTC();
+
+        let diff = Math.floor((next - now) / 1000);
+        if (diff < 0) diff = 0;
+        const h = Math.floor(diff / 3600);
+        const m = Math.floor((diff % 3600) / 60);
+        const s = diff % 60;
+
+        el.textContent =
+            `${h.toString().padStart(2,"0")}:` +
+            `${m.toString().padStart(2,"0")}:` +
+            `${s.toString().padStart(2,"0")}`;
+    }
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
