@@ -18,7 +18,7 @@
             <span></span>
         </label>
     <div class="menu-card" id="menu">
-        <a href="/index">Home</a>
+        <a href="/">Home</a>
         <a href="/shop">Daily Shop</a>
         <a href="/gallery">Gallery</a>
         <a href="/about">About</a>
@@ -58,7 +58,7 @@
         tryLoad();
     }
 
-    fetch("https://redfororg-backend-production.up.railway.app/api/shop") /* dont forget to change this to api.redfor.org */
+    fetch("https://api.redfor.org/shop")
         .then(res => res.json())
         .then(data => {
             setCardImage("pc1", data.pc1);
@@ -150,4 +150,3 @@
 updateCountdown();
 setInterval(updateCountdown, 1000);
 </script>
-

@@ -1,3 +1,5 @@
+# this file is depricated. please use https://api.redfor.org/shop. do not start this file.
+
 from fastapi import FastAPI
 import psycopg2
 import os
