@@ -25,11 +25,23 @@
     </div>
     <h4 class="titlepath" id="typed-text" data-text="agent@framework:/usr/home/gallery"></h4>
   </header>
-    <div class="gallery-content">
-        <h2></h2>
-    </div>
     <div class="gallery">
-        
+        <section class="rarity_section">
+            <h2>Common</h2>
+        <div class="common_cards" id="commonCards"></div>
+        </section>
+        <section class="rarity_section">
+            <h2>Uncommon</h2>
+        <div class="uncommon_cards" id="uncommonCards"></div>    
+        </section>
+        <section class="rarity_section">
+            <h2>Rare</h2>
+        <div class="rare_cards" id="rareCards"></div>   
+        </section>
+        <section class="rarity_section">
+            <h2>Epic</h2>
+        <div class="epic_cards" id="epicCards"></div>   
+        </section>
     </div>
 <footer>
     <h5 style="color: rgba(255, 255, 255, 0.2);">v1.0.0</h5>
@@ -85,5 +97,147 @@
         const el = document.getElementById("typed-text");
         const text = el.dataset.text;
         typeText(el, text, 10);
+    });
+
+    const commonCards = [
+        "321.png",
+        "Are You Seizon.png",
+        "Black Ice.png",
+        "Blue Decay.png",
+        "Bubble Gum.png",
+        "Chalked.png",
+        "Circuit.png",
+        "Drama.png",
+        "Duck.png",
+        "Eat Up.png",
+        "Emerald.png",
+        "Galaxy.png",
+        "Glitch.png",
+        "Green Skulls.png",
+        "Hearts N Flowers.png",
+        "Hello.png",
+        "Hyper Tension.png",
+        "Junglist.png",
+        "Lightning Bolt.png",
+        "Meh.png",
+        "Newborn Star.png",
+        "Off We Go.png",
+        "One Point For Me.png",
+        "Ocean.png",
+        "Pearly Whites.png",
+        "Pentagon Dreams.png",
+        "Pattern.png",
+        "Pop Art.png",
+        "Red Forest.png",
+        "Ricochet.png",
+        "Rhombus Space.png",
+        "Seeing Grey.png",
+        "Shinobi.png",
+        "Splatter.png",
+        "Teal Star.png",
+        "Timebomb.png",
+        "Vandalism.png",
+        "Water Ops.png",
+        "White Eye.png"
+    ];
+
+    const uncommonCards = [
+        "Beyond.png",
+        "Binary.png",
+        "Cat.png",
+        "Crackshot.png",
+        "Dansen.png",
+        "Electroshock.png",
+        "Foggy.png",
+        "Funky.png",
+        "Global Unification.png",
+        "Graph Paper Sketches.png",
+        "Good Weather.png",
+        "Instagib.png",
+        "Inside Universe.png",
+        "MOAB.png",
+        "Neva catch me.png",
+        "Notebook Sketch.png",
+        "Peace In War.png",
+        "Rage.png",
+        "Rave.png",
+        "Retro Rampage.png",
+        "Runt.png",
+        "Safeguard.png",
+        "Savages.png",
+        "Sneaky.png",
+        "Take It Easy.png",
+        "To Pay Respects.png",
+        "Vandalism.png"
+    ];
+
+    const rareCards = [
+        "9 Hour Work Day.png",
+        "Another Niko.png",
+        "Anime Blufor.png",
+        "Anime Redfor.png",
+        "Bombhawks.png",
+        "Childhood Memories.png",
+        "Crossroads.png",
+        "Defuse The Bomb.gif",
+        "Double Team.gif",
+        "Freakout.png",
+        "Gone Fishing.png",
+        "Imageboard.png",
+        "May Heaven Grant You Fortune.png",
+        "Mesmerizer.png",
+        "Mega Bombers.png",
+        "Niko.png",
+        "Party All The Time.png",
+        "Present Day.png",
+        "Rude Bomber.png",
+        "See-Through.png",
+        "The Choice.png",
+        "To Hell With Me.png",
+        "What Am I Fighting For.png"
+    ];
+
+    const epicCards = [
+        "Ascii White.gif",
+        "Dead On.gif",
+        "Defuse The Bomb.gif",
+        "Double Team.gif",
+        "Hi There.gif",
+        "Lightweight.gif",
+        "My Bombsite Was Burned To A Crisp.gif",
+        "Slashd.gif",
+        "Throwing Knife.gif",
+        "Toxic.gif",
+        "You Are An Idiot.gif"
+    ];
+
+    const commonContainer = document.getElementById("commonCards");
+    const uncommonContainer = document.getElementById("uncommonCards");
+    const rareContainer = document.getElementById("rareCards");
+    const epicContainer = document.getElementById("epicCards");
+
+    commonCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = `playercards/${card}`;
+        img.alt = card.replace(".png", "");
+        commonContainer.appendChild(img);
+    });
+    uncommonCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = `playercards/${card}`;
+        img.alt = card.replace(".png", "");
+        uncommonContainer.appendChild(img);
+    });
+    rareCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = `playercards/${card}`;
+        img.alt = card.replace(".png", "");
+        rareContainer.appendChild(img);
+    });
+    epicCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = `playercards/${card}`;
+        img.alt = card.replace(".gif", "");
+        epicContainer.appendChild(img);
     });
 </script>

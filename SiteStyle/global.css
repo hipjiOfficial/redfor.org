@@ -26,7 +26,8 @@ body {
   font-family: monospace;
 }
 .gallery-page-body {
-  background-image: url('SiteImages/pageUnderConstruction.png');
+  /*background-image: url('SiteImages/pageUnderConstruction.png');*/
+  background-color: #000000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,6 +39,7 @@ body {
   margin: 0;
   color: #eba61b;
   font-family: monospace;
+  padding-top: 100px;
 }
 .sketch {
   position: fixed;
@@ -254,4 +256,34 @@ a {
 #status-message {
     margin-top: 10px;
     font-size: 14px;
+}
+
+.common_cards,
+.uncommon_cards,
+.rare_cards,
+.epic_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 20px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.common_cards img,
+.uncommon_cards img,
+.rare_cards img,
+.epic_cards img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.common_cards img:hover,
+.uncommon_cards img:hover,
+.rare_cards img:hover,
+.epic_cards img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
