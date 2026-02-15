@@ -42,6 +42,10 @@
             <h2>Epic</h2>
         <div class="epic_cards" id="epicCards"></div>   
         </section>
+        <section class="rarity_section">
+            <h2>Limited</h2>
+        <div class="limited_cards" id="limitedCards"></div>   
+        </section>
     </div>
 <footer>
     <h5 style="color: rgba(255, 255, 255, 0.2);">v1.0.0</h5>
@@ -68,6 +72,10 @@
             navHoverSound.play();
         });
     });
+
+    const cardPreviewClickSound = new Audio("/SiteStyle/Audio/Select_2.mp3");
+    cardPreviewClickSound.volume = 0.6;
+    cardPreviewClickSound.preload = "auto";
 
     /* burger menu */
     const burger = document.getElementById("burger");
@@ -179,8 +187,6 @@
         "Bombhawks.png",
         "Childhood Memories.png",
         "Crossroads.png",
-        "Defuse The Bomb.gif",
-        "Double Team.gif",
         "Freakout.png",
         "Gone Fishing.png",
         "Imageboard.png",
@@ -211,10 +217,13 @@
         "You Are An Idiot.gif"
     ];
 
+    const limitedCards = [];
+
     const commonContainer = document.getElementById("commonCards");
     const uncommonContainer = document.getElementById("uncommonCards");
     const rareContainer = document.getElementById("rareCards");
     const epicContainer = document.getElementById("epicCards");
+    const limitedContainer = document.getElementById("limitedCards");
 
     commonCards.forEach(card => {
         const img = document.createElement("img");
@@ -239,5 +248,35 @@
         img.src = `playercards/${card}`;
         img.alt = card.replace(".gif", "");
         epicContainer.appendChild(img);
+    });
+    limitedCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = `playercards/${card}`;
+        img.alt = card.replace(".png", "");
+        limitedContainer.appendChild(img);
+    });
+
+    /* card preview */
+    const allCards = document.querySelectorAll(".gallery img");
+    allCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const preview = document.createElement("div");
+            preview.classList.add("card-preview");
+            document.body.style.overflow = "hidden";
+            cardPreviewClickSound.currentTime = 0;
+            cardPreviewClickSound.play();
+
+            const img = document.createElement("img");
+            img.src = card.src;
+            img.alt = card.alt;
+
+            preview.appendChild(img);
+            document.body.appendChild(preview);
+
+            preview.addEventListener("click", () => {
+                document.body.removeChild(preview);
+                document.body.style.overflow = "";
+            });
+        });
     });
 </script>
