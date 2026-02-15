@@ -304,3 +304,7 @@ a {
   max-height: 90%;
   object-fit: contain;
 }
+
+.version-number {
+  color: rgba(255, 255, 255, 0.2);
+}
