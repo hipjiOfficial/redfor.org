@@ -11,6 +11,7 @@ body {
   background-color: #000000;
   color: #eba61b;
   font-family: monospace;
+  overflow-x: hidden;
 }
 .about-page-body {
   display: flex;
@@ -40,6 +41,7 @@ body {
   color: #eba61b;
   font-family: monospace;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 .sketch {
   position: fixed;
@@ -261,21 +263,39 @@ a {
 .common_cards,
 .uncommon_cards,
 .rare_cards,
-.epic_cards {
+.epic_cards,
+.limited_cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  padding: 20px 40px;
-  max-width: 1600px;
+  padding: 20px;
+  width: 100%;
   margin: 0 auto;
-} /*quick note before i forget: change the max width to 420px in order to help with mobile layout. add detetection for that and make it change*/
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .common_cards,
+  .uncommon_cards,
+  .rare_cards,
+  .epic_cards,
+  .limited_cards {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(120px, 20vw, 250px), 1fr));
+    gap: 16px;
+    padding: 12px;
+  }
+}
+
+.gallery img {
+  width: min(18vw, 250px);
+}
 
 .common_cards img,
 .uncommon_cards img,
 .rare_cards img,
 .epic_cards img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 2px solid #eba61b;
@@ -305,6 +325,24 @@ a {
   object-fit: contain;
 }
 
+.rarity_section {
+  width: 100%;
+  padding: 20px 0;
+}
+
 .version-number {
   color: rgba(255, 255, 255, 0.2);
+}
+
+.under-construction {
+  background-image: url('SiteImages/pageUnderConstruction.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
