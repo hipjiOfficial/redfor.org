@@ -72,11 +72,12 @@ header {
   padding-top: 40px;
 }
 .shop img {
-  width: 640px;
-  height: 180px;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
   object-fit: cover;
   border: 2px solid #eba61b;
-  border-radius: 0px;
+  display: block;
 }
 nav {
   display: flex;
