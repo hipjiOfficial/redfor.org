@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>redfor.org - about</title>
-    <link rel="stylesheet" href="/SiteStyle/global.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 <audio id="bgm" loop>
-  <source src="SiteStyle/Audio/Bombline Main Theme.mp3" type="audio/mpeg">
+  <source src="assets/audio/Bombline Main Theme.mp3" type="audio/mpeg">
 </audio>
+<script src="/assets/js/audio.js" defer></script>
+<script src="/assets/js/core.js" defer></script>
+<script src="/assets/js/typing.js" defer></script>
+<script src="/assets/js/version.js" defer></script>
 <body class="about-page-body">
     <header>
         <label class="burger" for="burger">
@@ -29,11 +33,11 @@
         <h2>What is redfor.org?</h2>
         <p>Redfor.org is the culmination of my interest in bombline, data, and computers.</p>
         <p>Back in June of 2025, I started tracking the daily shop in a google sheet. In this google sheet I had probabilities calculated, and even automatic log coloring.</p>
-        <img src="SiteStyle/SiteImages/THE SHEET.png" alt="The sheet" style="width: 40%; border: 2px solid #eba61b;">
+        <img src="assets/images/THE SHEET.png" alt="The sheet" style="width: 40%; border: 2px solid #eba61b;">
         <p>Eventually the data started growing out of its sheets phase, so I migrated it to PostgreSQL.</p>
         <p>My very first idea was to make a website where you could visit and see the daily shop at any time.</p>
         <p>While a website was my main priority, I started testing what I could do with this data via a discord app, Redfor Bot.</p>
-        <img src="SiteStyle/SiteImages/redforbot.png" alt="Redfor Bot" style="width: 40%; border: 2px solid #eba61b;">
+        <img src="assets/images/redforbot.png" alt="Redfor Bot" style="width: 40%; border: 2px solid #eba61b;">
         <p>Redfor bot is where I tested features that I would eventually finalize on the website. The basic /getshop command is what drove the /dailyshop page.</p>
         <p>After a few months of screwing around, I finally got redfor.org working.</p>
         <p>Unfortunately, during the time it took me to develop redfor.org, bombline saw the biggest dropoff in playercount it had ever experienced.</p>
@@ -55,63 +59,8 @@
     <div class="sketch">
     </div>
 <footer>
-    <h5 style="color: rgba(255, 255, 255, 0.2);">v1.0.0</h5>
-    <!--<div class="logo">
-        <img src="SiteStyle/SiteImages/redfor - sketch.png">
-    </div>-->
+    <h5 id="version-number"></h5>
 </footer>
 </body>
-<script>
-    /* background music 
-    const audio = document.getElementById("bgm");
-    audio.volume = 0.4;
-    audio.play();
-    */
 
-    /* ui sounds */
-    const burgerClickSound = new Audio("/SiteStyle/Audio/Select_2.mp3");
-    burgerClickSound.volume = 0.6;
-
-
-    const navHoverSound = new Audio("/SiteStyle/Audio/Hover.mp3");
-    navHoverSound.volume = 0.4;
-    navHoverSound.preload = "auto";
-
-    document.querySelectorAll(".menu-card a").forEach(link => {
-        link.addEventListener("mouseenter", () => {
-            navHoverSound.currentTime = 0;
-            navHoverSound.play();
-        });
-    });
-
-    /* burger menu */
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("menu");
-
-    burger.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        burgerClickSound.currentTime = 0;
-        burgerClickSound.play();
-    });
-
-    /* typed text animation */
-    function typeText(element, text, speed = 50) {
-        element.textContent = "";
-        let i = 0;
-
-        const interval = setInterval(() => {
-            element.textContent += text[i];
-            i++;
-            if (i >= text.length) {
-                clearInterval(interval);
-            }
-        }, speed);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const el = document.getElementById("typed-text");
-        const text = el.dataset.text;
-        typeText(el, text, 10);
-    });
-</script>
 
