@@ -347,3 +347,15 @@ a {
   justify-content: center;
   margin: 0;
 }
+
+.playercard {
+    border: 1px solid #eba61b;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+}
+
+.playercard select {
+    margin-top: 10px;
+    width: 100%;
+}

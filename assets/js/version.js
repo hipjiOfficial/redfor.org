@@ -9,4 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.0.1"; // added defuse the bomb gif
 // window.version = "1.1.0"; // gallery page added
 // window.version = "1.2.0"; // Javascript rearrangement. Removed every instance of a <script> tag and replaced them with specific .js files. Minor changes to gallery and shop, including rewriting styles to better fit mobile and smaller screens.
-window.version = "1.2.1"; //  New Site Logo' -m 'Added a temporary favicon.
+// window.version = "1.2.1"; //  New Site Logo' -m 'Added a temporary favicon.
+window.version = "1.2.2"; // Updated playercards/Childhood Memories.png May Heaven Grant You Fortune.png Rave.png & Safeguard.png. Added skins folder.
