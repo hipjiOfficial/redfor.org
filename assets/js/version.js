@@ -12,4 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.2.1"; //  New Site Logo' -m 'Added a temporary favicon.
 // window.version = "1.2.2"; // Updated playercards/Childhood Memories.png May Heaven Grant You Fortune.png Rave.png & Safeguard.png. Added skins folder.
 // window.version = "1.2.3"; // started work on letmeknow and wrongshop. added throwing knife gif. 
-window.version = "1.2.4"; // added pentagon dreams
+// window.version = "1.2.4"; // added pentagon dreams
+window.version = "1.2.5"; // changed about page to work better. added stub for forums. minor changes to about and wrongshop content.
