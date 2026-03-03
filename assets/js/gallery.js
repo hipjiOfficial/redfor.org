@@ -54,7 +54,7 @@ const uncommonCards = [
     "Instagib.png",
     "Inside Universe.png",
     "MOAB.png",
-    "Neva catch me.png",
+    "Neva Catch Me.png",
     "Notebook Sketch.png",
     "Peace In War.png",
     "Rage.png",
