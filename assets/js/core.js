@@ -10,7 +10,7 @@ if (burger && menu) {
     });
 }
 
-// shop reset timer 
+// shop reset timer
 function getNextShopTimeUTC() {
     const now = new Date();
     const next = new Date(Date.UTC(

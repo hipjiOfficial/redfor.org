@@ -104,13 +104,44 @@ const epicCards = [
     "Toxic.gif",
     "You Are An Idiot.gif"
 ];
-const limitedCards = [];
+const limitedCards = [
+    "Bomb.png",
+    "Fumos.png"
+];
+const achievementCards = [
+    "Bomb.png",
+    "Can't Stop Me.png",
+    "Chibi Blufor.png",
+    "Chibi Redfor.png",
+    "Clean House.png",
+    "Close Call.png",
+    "Default.png",
+    "Fumo.png",
+    "Gib Master.png",
+    "Grenadier.png",
+    "Hit By Pitch.png",
+    "I C Thru U.png",
+    "Jack Of All Trades.png",
+    "Knife Mastery.png",
+    "Let's Tango.png",
+    "Long Distance Friendship.png",
+    "MVP.png",
+    "Plant Site Is Two Blocks Down.png",
+    "Rage Quit.png",
+    "Recon.png",
+    "Red4 And Blu4.png",
+    "She's On Fire.png",
+    "Shining Lights.png",
+    "Top Elite.png",
+    "XXHEAD_SHOTXX.png"
+]; // missing: premium, 
 
 const commonContainer = document.getElementById("commonCards");
 const uncommonContainer = document.getElementById("uncommonCards");
 const rareContainer = document.getElementById("rareCards");
 const epicContainer = document.getElementById("epicCards");
 const limitedContainer = document.getElementById("limitedCards");
+const achievementContainer = document.getElementById("achievementCards")
 
 commonCards.forEach(card => {
     const img = document.createElement("img");
@@ -141,6 +172,12 @@ limitedCards.forEach(card => {
     img.src = `playercards/${card}`;
     img.alt = card.replace(".png", "");
     limitedContainer.appendChild(img);
+});
+achievementCards.forEach(card => {
+    const img = document.createElement("img");
+    img.src = `playercards/${card}`;
+    img.alt = card.replace(".png", "");
+    achievementContainer.appendChild(img);
 });
 
 // card preview

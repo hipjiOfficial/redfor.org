@@ -304,7 +304,8 @@ a {
 .uncommon_cards,
 .rare_cards,
 .epic_cards,
-.limited_cards {
+.limited_cards,
+.achievement_cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
@@ -319,7 +320,8 @@ a {
   .uncommon_cards,
   .rare_cards,
   .epic_cards,
-  .limited_cards {
+  .limited_cards,
+  .achievement_cards {
     grid-template-columns: repeat(auto-fit, minmax(clamp(120px, 20vw, 250px), 1fr));
     gap: 16px;
     padding: 12px;
@@ -333,7 +335,9 @@ a {
 .common_cards img,
 .uncommon_cards img,
 .rare_cards img,
-.epic_cards img {
+.epic_cards img,
+.limited_cards img,
+.achievement_cards img {
   width: 100%;
   object-fit: contain;
   border-radius: 6px;
@@ -344,7 +348,9 @@ a {
 .common_cards img:hover,
 .uncommon_cards img:hover,
 .rare_cards img:hover,
-.epic_cards img:hover {
+.epic_cards img:hover,
+.limited_cards img:hover,
+.achievement_cards img:hover {
   transform: scale(1.04);
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
