@@ -85,10 +85,16 @@ header {
 }
 .shop {
   display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+.shop-cards {
+  display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  padding-top: 100px;
 }
 .shop img {
   width: 100%;
@@ -97,6 +103,20 @@ header {
   object-fit: cover;
   border: 2px solid #eba61b;
   display: block;
+}
+#skin {
+  max-width: 530px;
+  align-self: center;
+}
+@media (max-width: 1058px) {
+  .shop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skin {
+    max-width: 640px;
+  }
 }
 nav {
   display: flex;
