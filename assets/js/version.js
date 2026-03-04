@@ -15,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.2.4"; // added pentagon dreams
 // window.version = "1.2.5"; // changed about page to work better. added stub for forums. minor changes to about and wrongshop content.
 // window.version = "1.3.0"; // Major shop rework. Added support for skins. The shop now immediatley scales for any device smaller than 1058px. May revise.
-window.version = "1.3.1"; // Added cards to limited section. Created brand new Achievements section and added many cards to it.
+// window.version = "1.3.1"; // Added cards to limited section. Created brand new Achievements section and added many cards to it.
+window.version = "1.3.2"; // Added great war skin
