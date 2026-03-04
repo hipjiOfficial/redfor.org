@@ -109,8 +109,6 @@ const limitedCards = [
     "Fumos.png"
 ];
 const achievementCards = [
-    "Bomb.png",
-    "Can't Stop Me.png",
     "Chibi Blufor.png",
     "Chibi Redfor.png",
     "Clean House.png",
@@ -133,6 +131,7 @@ const achievementCards = [
     "She's On Fire.png",
     "Shining Lights.png",
     "Top Elite.png",
+    "Unstoppable.png",
     "XXHEAD_SHOTXX.png"
 ]; // missing: premium, 
 
