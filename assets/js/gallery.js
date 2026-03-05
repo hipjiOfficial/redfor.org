@@ -108,6 +108,7 @@ const limitedCards = [
     "Bomb.png",
     "Fumos.png"
 ];
+// i would love to eventually be able to display every single christmas (are there christmas cards?) and halloween card, but we'll never get another seasonal update until i buy the game
 const achievementCards = [
     "Chibi Blufor.png",
     "Chibi Redfor.png",
@@ -133,7 +134,8 @@ const achievementCards = [
     "Top Elite.png",
     "Unstoppable.png",
     "XXHEAD_SHOTXX.png"
-]; // missing: premium, 
+]; // missing: premium, walking billboard
+// i dont have premium and it wont let me preview it because my chat window aligns itself EXACTLY over the inspect button.
 
 const commonContainer = document.getElementById("commonCards");
 const uncommonContainer = document.getElementById("uncommonCards");
