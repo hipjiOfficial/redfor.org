@@ -3,8 +3,12 @@
 
 redfor.org is a utitlity website created for players of the ROBLOX game Bombline. Using this website, you can easily view Bombline information online that you would otherwise to join the game for.
 
+## Current Features
 
-## Features
+- Daily shop: Easily get the daily shop at any time. 
+- Gallery: View and inspect any card in the game. 
+
+## Planned Features
 
 - LetMeKnow: Submit your discord username and a playercard to be automatically notified by the bot when your card is in the shop.
 - Redforums: Forum page for redfor.org

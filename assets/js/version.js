@@ -18,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.3.1"; // Added cards to limited section. Created brand new Achievements section and added many cards to it.
 // window.version = "1.3.2"; // Added great war skin
 // window.version = "1.3.3"; // Minor bug fixes. Fixed "Unstoppable" being incorrectly named. Fixed "Bomb" limited card accidentally appearing in the Achievements category.
-window.version = "1.3.4"; // Added frogmen skin
+// window.version = "1.3.4"; // Added frogmen skin
+window.version = "1.3.5"; // Added prices in gallery, including porting over the official bombline coin graphic. Changed readme to be more specific about which features had already been implemented.
