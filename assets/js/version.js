@@ -22,4 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.3.5"; // Added prices in gallery, including porting over the official bombline coin graphic. Changed readme to be more specific about which features had already been implemented.
 // window.version = "1.3.6"; // Added What Am I fighting for
 // window.version = "1.3.7"; // Updated Galaxy. Updated Funky.
-window.version = "1.3.8"; // Updated Seeing Grey.
+// window.version = "1.3.8"; // Updated Seeing Grey.
+window.version = "1.3.9"; // updated timdebomb
