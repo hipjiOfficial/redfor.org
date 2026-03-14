@@ -45,3 +45,26 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// card preview
+function openCardPreview(src, alt) {
+    const preview = document.createElement("div");
+    preview.classList.add("card-preview");
+    document.body.style.overflow = "hidden";
+    cardPreviewClickSound.currentTime = 0;
+    cardPreviewClickSound.play();
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = alt;
+
+    preview.appendChild(img);
+    document.body.appendChild(preview);
+
+    preview.addEventListener("click", () => {
+        document.body.removeChild(preview);
+        document.body.style.overflow = "";
+        cardPreviewClickoffSound.currentTime = 0;
+        cardPreviewClickoffSound.play();
+    });
+}

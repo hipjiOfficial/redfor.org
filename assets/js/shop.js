@@ -39,6 +39,12 @@ function setSkinImage(imgId, skinName) {
     tryLoad();
 }
 
+function shopPreview(imgId) {
+    const img = document.getElementById(imgId);
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => openCardPreview(img.src, img.alt));
+}
+
 fetch("https://api.redfor.org/shop")
     .then(res => res.json())
     .then(data => {
@@ -46,4 +52,7 @@ fetch("https://api.redfor.org/shop")
         setCardImage("pc2", data.pc2);
         setCardImage("pc3", data.pc3);
         setSkinImage("skin", data.skin);
-    })
+        shopPreview("pc1");
+        shopPreview("pc2");
+        shopPreview("pc3");
+    });

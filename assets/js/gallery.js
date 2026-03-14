@@ -184,25 +184,5 @@ achievementCards.forEach(card => {
 // card preview
 const allCards = document.querySelectorAll(".gallery img");
 allCards.forEach(card => {
-    card.addEventListener("click", () => {
-        const preview = document.createElement("div");
-        preview.classList.add("card-preview");
-        document.body.style.overflow = "hidden";
-        cardPreviewClickSound.currentTime = 0;
-        cardPreviewClickSound.play();
-
-        const img = document.createElement("img");
-        img.src = card.src;
-        img.alt = card.alt;
-
-        preview.appendChild(img);
-        document.body.appendChild(preview);
-
-        preview.addEventListener("click", () => {
-            document.body.removeChild(preview);
-            document.body.style.overflow = "";
-            cardPreviewClickoffSound.currentTime = 0;
-            cardPreviewClickoffSound.play();
-        });
-    });
+    card.addEventListener("click", () => openCardPreview(card.src, card.alt));
 });
