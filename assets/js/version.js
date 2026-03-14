@@ -24,4 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.3.7"; // Updated Galaxy. Updated Funky.
 // window.version = "1.3.8"; // Updated Seeing Grey.
 // window.version = "1.3.9"; // updated timdebomb
-window.version = "1.3.10"; // Added Slash'd gif. I really should add a large feature so I can reset the version to 1.4 and not continue double digits on the hotfix number.
+// window.version = "1.3.10"; // Added Slash'd gif. I really should add a large feature so I can reset the version to 1.4 and not continue double digits on the hotfix number.
+window.version = "1.3.11"; // Added El Dorado to skin asset folder
