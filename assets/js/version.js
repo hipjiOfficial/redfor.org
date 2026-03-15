@@ -27,4 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.3.10"; // Added Slash'd gif. I really should add a large feature so I can reset the version to 1.4 and not continue double digits on the hotfix number.
 // window.version = "1.3.11"; // Added El Dorado to skin asset folder
 // window.version = "1.3.12"; // Moved the card preview functionality to core.js so I can just load it and call openCardPreview(). This way I can have card previews on any page I want and not just gallery. One more reason for centralizing this is I want to eventually use the card preview to add that card to your wishlist, which LetMeKnow would be able to grab later.
-window.version = "1.4.0"; // New og-image.php. Allows for a nice embed whenever someone posts www.refor.org/shop.
+window.version = "1.4.0"; // New og-image.php. Allows for a nice embed whenever someone posts www.redfor.org/shop.
