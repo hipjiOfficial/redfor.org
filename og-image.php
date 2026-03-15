@@ -4,9 +4,8 @@ if (!$shopData) { http_response_code(500); exit; }
 
 $cards = [$shopData['pc1'], $shopData['pc2'], $shopData['pc3']];
 $skin  = $shopData['skin'];
-
-$cardW = 790; $cardH = 245;
-$skinW = 465; $skinH = 515;
+$cardW = 620; $cardH = 210;
+$skinW = 620; $skinH = 515;
 
 $pad     = 24;
 $gap     = 12;
