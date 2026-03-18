@@ -1,9 +1,10 @@
+<?php $v = gmdate('Ymd'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://www.redfor.org/og-image.php"/>
+    <meta property="og:image" content="https://www.redfor.org/og-image.php?v=<?= $v ?>"/>
     <meta property="og:title" content="Daily Shop"/>
     <meta property="og:description" content="Today's shop rotation"/>
     <meta property="og:url" content="https://www.redfor.org/shop"/>
