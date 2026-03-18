@@ -29,4 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.3.12"; // Moved the card preview functionality to core.js so I can just load it and call openCardPreview(). This way I can have card previews on any page I want and not just gallery. One more reason for centralizing this is I want to eventually use the card preview to add that card to your wishlist, which LetMeKnow would be able to grab later.
 // window.version = "1.4.0"; // New og-image.php. Allows for a nice embed whenever someone posts www.redfor.org/shop.
 // window.version = "1.4.1"; //Updated bubble gum
-window.version = "1.4.2"; // changed shop.html to shop.php so i can append a ?v= to bust discords idiodic cache lol
+window.version = "1.4.2"; // changed shop.html to shop.php so i can append a ?v= to bust discords idiotic cache lol
