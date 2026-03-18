@@ -11,9 +11,11 @@ redfor.org is a utitlity website created for players of the ROBLOX game Bombline
 ## Planned Features
 
 - LetMeKnow: Submit your discord username and a playercard to be automatically notified by the bot when your card is in the shop.
-- Redforums: Forum page for redfor.org
+- LiveMatches: See what matches are currently being played, including what map, and possibly any other information I might be able to scrape. 
+- CaseSim: Pop open cases without spending any coins. 
 - AreWeWrong: Functionality for users to upload a screenshot of the real shop if it is incorrect on redfor.org, and it will update.
 - Accounts: Bringing login functionality to redfor.org. This will allow you to use features such as LetMeKnow without having to input anything, as you can link your discord to your redfor account. I am also planning on adding more features that require an account, so this will be coming very soon.
+- Redforums: Forum page for redfor.org
 
 Any development not listed here is most likely never going to happen.
 
