@@ -30,4 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.4.0"; // New og-image.php. Allows for a nice embed whenever someone posts www.redfor.org/shop.
 // window.version = "1.4.1"; //Updated bubble gum
 // window.version = "1.4.2"; // changed shop.html to shop.php so i can append a ?v= to bust discords idiotic cache lol
-window.version = "1.4.3"; // Added ocean. Updated global unification.
+// window.version = "1.4.3"; // Added ocean. Updated global unification.
+window.version = "1.4.4"; // Added Cold Front.
