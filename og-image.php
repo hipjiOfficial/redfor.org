@@ -1,4 +1,6 @@
 <?php
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
 $shopData = @json_decode(file_get_contents('https://api.redfor.org/shop'), true);
 if (!$shopData) { http_response_code(500); exit; }
 
@@ -43,9 +45,11 @@ foreach ($cards as $i => $name) {
 
     $cardPath = __DIR__ . '/playercards/' . $name . '.png';
     if (file_exists($cardPath)) {
-        $cardImg = imagecreatefrompng($cardPath);
-        imagecopyresampled($img, $cardImg, $cx + $borderT, $panelY + $borderT, 0, 0, $cardW - ($borderT * 2), $cardH, imagesx($cardImg), imagesy($cardImg));
-        imagedestroy($cardImg);
+        $cardImg = @imagecreatefromstring(file_get_contents($cardPath));
+        if ($cardImg !== false) {
+            imagecopyresampled($img, $cardImg, $cx + $borderT, $panelY + $borderT, 0, 0, $cardW - ($borderT * 2), $cardH, imagesx($cardImg), imagesy($cardImg));
+            imagedestroy($cardImg);
+        }
     }
 }
 
@@ -58,17 +62,17 @@ drawBorderedRect($img, $sx, $sy, $rightW, $skinPanelH, $cGold, $cDark, $borderT)
 
 $skinPath = __DIR__ . '/skins/' . $skin . '.png';
 if (file_exists($skinPath)) {
-    $skinImg = imagecreatefrompng($skinPath);
-    imagecopyresampled($img, $skinImg, $sx + $borderT, $sy + $borderT, 0, 0, $rightW - ($borderT * 2), $skinPanelH - ($borderT * 2), imagesx($skinImg), imagesy($skinImg));
-    imagedestroy($skinImg);
+    $skinImg = @imagecreatefromstring(file_get_contents($skinPath));
+    if ($skinImg !== false) {
+        imagecopyresampled($img, $skinImg, $sx + $borderT, $sy + $borderT, 0, 0, $rightW - ($borderT * 2), $skinPanelH - ($borderT * 2), imagesx($skinImg), imagesy($skinImg));
+        imagedestroy($skinImg);
+    }
 }
-
 $footerY    = $pad + $leftH + $gap;
 $footerText = 'REDFOR.ORG  --  DAILY SHOP  --  ' . strtoupper($shopData['log_date']);
 $textX      = (int)(($totalW - strlen($footerText) * imagefontwidth(3)) / 2);
 imagestring($img, 3, $textX, $footerY + 12, $footerText, $cGoldDim);
 
 header('Content-Type: image/png');
-header('Cache-Control: public, max-age=3600'); // resets cache every 1h. might change to 24h but idc
 imagepng($img);
 imagedestroy($img);
