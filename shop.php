@@ -34,6 +34,7 @@
         <a href="/shop">Daily Shop</a>
         <a href="/gallery">Gallery</a>
         <a href="/about">About</a>
+        <a href="/support">Support</a>
     </div>
     <h4 class="titlepath" id="typed-text" data-text="agent@framework:/usr/home/dailyshop"></h4>
   </header>
