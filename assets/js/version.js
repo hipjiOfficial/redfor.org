@@ -35,4 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.4.5"; //updated splatter
 // window.version = "1.4.6"; // Changed the way og-image renders images, now uses imagecreatefromstring instead of imagecreatefrompng, so it doesn't fail if a file isn't a png. I currently have no idea why, but recently the whole page crashed due to this problem. Every playercard asset is a .png, so I have no clue as to what about Dansen.png caused this issue specifically. Started work on a new homepage.
 // window.version = "1.4.7"; // Added support page, as well as adding support buttons on specific pages. 
-window.version = "1.4.8"; // Added You Are An Idiot gif
+// window.version = "1.4.8"; // Added You Are An Idiot gif
+window.version = "1.4.9"; // Added gif previews to og-image.php. Fixed bug displaying static gif previews in shop. Modified support page to show new supporter rewards. Updated startuptest.

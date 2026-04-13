@@ -2,7 +2,7 @@
 function setCardImage(imgId, cardName) {
     const img = document.getElementById(imgId);
     const basePath = `/playercards/${cardName}`;
-    const extensions = ["png", "gif"];
+    const extensions = ["gif", "png"];
 
     let i = 0;
 

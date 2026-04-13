@@ -128,12 +128,43 @@ a {
   color: #eba61b;
   text-decoration: underline;
 }
+.ascii pre a {
+  color: #eba61b;
+  text-decoration: none;
+}
+.ascii pre a:hover {
+  color: #795c22;
+}
 .homepage-navigation {
   display: flex;
   gap: 20px;
   margin-top: 30px;
   align-items: flex-start;
   text-align: center;
+}
+.ascii {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 100px auto 0;
+  max-width: 1000px;
+}
+.ascii-text {
+  min-width: 320px;
+}
+.ascii-image img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .ascii {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .about-image {
   width: 20px;
@@ -406,4 +437,11 @@ a {
 }
 #coin {
   size: 10px;
+}
+.support-message {
+  margin-top: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  font-size: 17px;
+  color: #eba61b;
 }
