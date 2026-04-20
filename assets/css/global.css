@@ -445,3 +445,22 @@ a {
   font-size: 17px;
   color: #eba61b;
 }
+#down-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+#down-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #eba61b;
+  border-radius: 5px;
+  padding: 2rem 3rem;
+  text-align: center;
+  color: #eba61b;
+}

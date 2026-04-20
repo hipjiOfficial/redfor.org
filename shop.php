@@ -38,6 +38,13 @@
     </div>
     <h4 class="titlepath" id="typed-text" data-text="agent@framework:/usr/home/dailyshop"></h4>
   </header>
+    <div id="down-overlay">
+        <div id="down-box">
+        <h2>Daily Shop is currently down.</h2>
+        <p>I ran out of CU-hrs, so the database in which the api uses is unavailable.</p>
+        <p>I am working on a fix, but I don't know when it will be ready. Sorry.</p>
+        </div>
+    </div>
     <div class="shop">
         <div class="shop-cards">
             <img id="pc1">
