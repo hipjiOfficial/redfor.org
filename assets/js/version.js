@@ -37,4 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.4.7"; // Added support page, as well as adding support buttons on specific pages. 
 // window.version = "1.4.8"; // Added You Are An Idiot gif
 //window.version = "1.4.9"; // Added gif previews to og-image.php. Fixed bug displaying static gif previews in shop. Modified support page to show new supporter rewards. Updated startuptest.
-window.verison = "1.4.9D"; // Is this where it ends? Ran out of compute hours only 18 days into the month. Could cough up some money, but why spend money on this? Gonna contact Vao and Des to see if I can't work out a way to expose the daily shop data to an api I can use. Added down overlay.
+window.version = "1.4.9D"; // Is this where it ends? Ran out of compute hours only 18 days into the month. Could cough up some money, but why spend money on this? Gonna contact Vao and Des to see if I can't work out a way to expose the daily shop data to an api I can use. Added down overlay.
