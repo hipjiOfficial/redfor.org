@@ -42,7 +42,8 @@
         <div id="down-box">
         <h2>Daily Shop is currently down.</h2>
         <p>I ran out of CU-hrs only 18 days into the month, so the database that the api uses is unavailable.</p>
-        <p>I am working on a fix, but I don't know when it will be ready. Sorry.</p>
+	<p>I am working on a fix, but I don't know when it will be ready. Sorry.</p>
+	<p>In the meantime, check out the <a href="https://www.redfor.org/gallery">gallery</a>.</p>
         </div>
     </div>
     <div class="shop">
