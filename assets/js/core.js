@@ -60,11 +60,20 @@ function openCardPreview(src, alt) {
 
     preview.appendChild(img);
     document.body.appendChild(preview);
+    requestAnimationFrame(() => {
+        preview.classList.add("active");
+    });
 
     preview.addEventListener("click", () => {
+    preview.classList.remove("active");
+    cardPreviewClickoffSound.currentTime = 0;
+    cardPreviewClickoffSound.play();
+
+    // wait for the transition to finish, then remove
+    preview.addEventListener("transitionend", () => {
         document.body.removeChild(preview);
         document.body.style.overflow = "";
-        cardPreviewClickoffSound.currentTime = 0;
-        cardPreviewClickoffSound.play();
-    });
+    }, { once: true });
+});
+    
 }
