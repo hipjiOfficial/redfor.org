@@ -45,7 +45,8 @@ function shopPreview(imgId) {
     img.addEventListener("click", () => openCardPreview(img.src, img.alt));
 }
 
-fetch("https://api.redfor.org/shop")
+// fetch("https://api.redfor.org/shop")
+fetch('https://hipjiofficial.github.io/redfor-shop-cache/shop-data.json')
     .then(res => res.json())
     .then(data => {
         setCardImage("pc1", data.pc1);

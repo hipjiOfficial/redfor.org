@@ -1,7 +1,7 @@
 <?php
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
-$shopData = @json_decode(file_get_contents('https://api.redfor.org/shop'), true);
+$shopData = @json_decode(file_get_contents('https://hipjiofficial.github.io/redfor-shop-cache/shop-data.json'), true);
 if (!$shopData) { http_response_code(500); exit; }
 
 $cards = [$shopData['pc1'], $shopData['pc2'], $shopData['pc3']];
