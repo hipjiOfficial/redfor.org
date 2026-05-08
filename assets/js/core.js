@@ -69,7 +69,6 @@ function openCardPreview(src, alt) {
     cardPreviewClickoffSound.currentTime = 0;
     cardPreviewClickoffSound.play();
 
-    // wait for the transition to finish, then remove
     preview.addEventListener("transitionend", () => {
         document.body.removeChild(preview);
         document.body.style.overflow = "";
