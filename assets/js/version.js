@@ -40,4 +40,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.4.9D"; // Is this where it ends? Ran out of compute hours only 18 days into the month. Could cough up some money, but why spend money on this? Gonna contact Vao and Des to see if I can't work out a way to expose the daily shop data to an api I can use. Added down overlay.
 // window.version = "1.4.9"; // removed down overlay. currently working on a new system to avoid problems in the future.
 // window.version = "1.4.10"; // Added new animations for card preview.
-window.version = "1.5.0"; // Band-aid fix: Made a github actions workflow to update a github page with the shop data. Now the shop fetches from the github page instead of api.redfor.org. The reason for this is to have a static, unchanging file that never sleeps, speeding up load times and allowing for embeds no matter what.
+//window.version = "1.5.0"; // Band-aid fix: Made a github actions workflow to update a github page with the shop data. Now the shop fetches from the github page instead of api.redfor.org. The reason for this is to have a static, unchanging file that never sleeps, speeding up load times and allowing for embeds no matter what.
+window.version = "1.5.1"; // Added hi there gif. Also this is the day I found epic only drop on thursdays. monumental.
