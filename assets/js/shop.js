@@ -28,7 +28,7 @@ function setSkinImage(imgId, skinName) {
 
     function tryLoad() {
         if (i >= extension.length) {
-            img.src = '/playercards/Lost Media.png'; // PLACEHOLDER! MAKE A LOST MEDIA SKIN SIZE!
+            img.src = '/skins/Lost Media Skin.png';
             return;
         }
         img.src = `${basePath}.${extension[i]}`;

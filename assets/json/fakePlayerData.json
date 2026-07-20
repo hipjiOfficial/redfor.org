@@ -1,0 +1,25 @@
+{
+  "name": "hipji",
+  "level": 300,
+  "xp": { "current": 6200, "max": 7950 },
+  "avatarUrl": "...",
+  "playercard": "Bombhawks",
+  "skin": "El Dorado",
+  "stats": {
+    "wins": 844,
+    "losses": 803,
+    "kills": 12206,
+    "deaths": 7554,
+    "assists": 1758,
+    "headshots": 2906,
+    "longshots": 427,
+    "wallbangs": 247,
+    "collaterals": 3,
+    "damage": 1445742,
+    "dominations": 387,
+    "revenges": 30,
+    "plants": 149,
+    "defusals": 182,
+    "timeSpentSeconds": 851400
+  }
+}

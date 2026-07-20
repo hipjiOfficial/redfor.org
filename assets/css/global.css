@@ -490,6 +490,8 @@ a {
   border: 1px solid #eba61b;
   /* margin: 10px; */
   padding: 10px;
+  width: 250px;
+  height: 100%;
 }
 .uc-avatar {
   border: 1px solid #eba61b;
@@ -535,7 +537,7 @@ a {
 }
 .uc-skin {
   border: 1px solid #eba61b;
-  width: 170px;
+  width: 212px;
   height: 100%;
   margin-top: 5px;
   display: flex;
@@ -549,9 +551,73 @@ a {
 }
 .stats {
   font-family: audiowide, monospace;
-  font-size: 20px;
   border: 1px solid #eba61b;
-  width: 900px;      /* adjust to whatever fits your stat rows */
-  height: 520px;     /* tall enough to hold wins/losses/kills/etc. */
+  width: 700px;
+  padding: 15px;
+  color: #eba61b;
+}
+.stats-header h3 {
+  margin: 0 0 15px 0;
+}
+.stats-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.name-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  width: 220px;
+}
+.name-entry label {
+  font-size: 14px;
+}
+.name-entry input {
+  background: transparent;
+  border: 1px solid #eba61b;
+  color: #eba61b;
+  text-align: center;
+  padding: 6px;
+  font-family: inherit;
+  width: 100%;
+}
+.lv-xp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  width: 100%;
+}
+.xp-bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border: 1px solid #eba61b;
+}
+.xp-fill {
+  height: 100%;
+  background: #eba61b;
+  width: 0%; 
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.stat-box {
+  background: #1e1e1e;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.stat-box.loss span:first-child {
+  color: #e05a5a;
+}
+.stats-divider {
+  border: none;
+  border-top: 1px solid #eba61b;
+  margin: 12px 0;
 }

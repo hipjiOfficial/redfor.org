@@ -76,9 +76,3 @@ function setUserName(name) {
 }
 
 /* user statistics */
-
-// two ways I think i could go about this. 
-// 1: fetch each individual piece, playercard, skin, avatar, name, then stats. 
-// 2: fetch everything and then break it up into pieces.
-// depends on how the api is set up though
-
