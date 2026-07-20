@@ -471,3 +471,87 @@ a {
   text-align: center;
   color: #eba61b;
 }
+
+
+
+/* PLAYER TRACKER */
+.tracker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 50px;
+}
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eba61b;
+  /* margin: 10px; */
+  padding: 10px;
+}
+.uc-avatar {
+  border: 1px solid #eba61b;
+  width: 200px;
+  height: 200px;
+}
+.uc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.uc-name {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #eba61b;
+  margin-top: 5px;
+}
+
+#player-name {
+  font-family: audiowide, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.uc-playercard {
+  border: 1px solid #eba61b;
+  width: 225px;
+  height: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uc-playercard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.uc-skin {
+  border: 1px solid #eba61b;
+  width: 170px;
+  height: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uc-skin img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.stats {
+  font-family: audiowide, monospace;
+  font-size: 20px;
+  border: 1px solid #eba61b;
+  width: 900px;      /* adjust to whatever fits your stat rows */
+  height: 520px;     /* tall enough to hold wins/losses/kills/etc. */
+  padding: 10px;
+}
