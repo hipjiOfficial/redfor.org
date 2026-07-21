@@ -1,0 +1,25 @@
+{
+  "name": "longNamePlayer1234567890",
+  "level": 155,
+  "xp": { "current": 1200, "max": 4000 },
+  "avatarUrl": "...",
+  "playercard": "My Bombsite Was Burned To A Crisp",
+  "skin": "Cold Front",
+  "stats": {
+    "wins": 512,
+    "losses": 490,
+    "kills": 6011,
+    "deaths": 5890,
+    "assists": 900,
+    "headshots": 1200,
+    "longshots": 88,
+    "wallbangs": 60,
+    "collaterals": 2,
+    "damage": 733200,
+    "dominations": 140,
+    "revenges": 15,
+    "plants": 70,
+    "defusals": 65,
+    "timeSpentSeconds": 402300
+  }
+}

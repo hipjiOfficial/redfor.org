@@ -1,0 +1,28 @@
+{
+  "name": "highLevelPlayer",
+  "level": 999,
+  "xp": {
+    "current": 10000,
+    "max": 10000
+  },
+  "avatarUrl": "...",
+  "playercard": "Top Elite",
+  "skin": "Apex Predators",
+  "stats": {
+    "wins": 50231,
+    "losses": 12044,
+    "kills": 981233,
+    "deaths": 300221,
+    "assists": 88012,
+    "headshots": 200400,
+    "longshots": 9001,
+    "wallbangs": 15230,
+    "collaterals": 402,
+    "damage": 128443211,
+    "dominations": 30122,
+    "revenges": 2200,
+    "plants": 9812,
+    "defusals": 10233,
+    "timeSpentSeconds": 2004000
+  }
+}

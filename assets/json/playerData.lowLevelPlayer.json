@@ -1,0 +1,25 @@
+{
+  "name": "lowLevelPlayer",
+  "level": 3,
+  "xp": { "current": 40, "max": 500 },
+  "avatarUrl": "...",
+  "playercard": "MVP",
+  "skin": "The Streets",
+  "stats": {
+    "wins": 5,
+    "losses": 0,
+    "kills": 22,
+    "deaths": 0,
+    "assists": 4,
+    "headshots": 3,
+    "longshots": 0,
+    "wallbangs": 0,
+    "collaterals": 0,
+    "damage": 3100,
+    "dominations": 0,
+    "revenges": 0,
+    "plants": 1,
+    "defusals": 0,
+    "timeSpentSeconds": 1800
+  }
+}
