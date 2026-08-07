@@ -142,7 +142,7 @@ function renderPlayer(data) {
     setUserCard(data.playercard);
     setUserSkin(data.skin);
     setPlayerStats(data.stats);
-    // setUserAvatar(data.avatarUrl); 
+    // setUserAvatar(data.avatarUrl); // literally just noticed this while looking at github. don't forget to change this, since getting the avatar should just use a name.  
 }
 
 function showLoadingState() {
