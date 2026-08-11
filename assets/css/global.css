@@ -621,3 +621,55 @@ a {
   border-top: 1px solid #eba61b;
   margin: 12px 0;
 }
+
+.account-box {
+  border: 1px solid #eba61b;
+  padding: 40px;
+  margin-top: 40px;
+  align-self: center;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+input[type="text"] {
+  background: transparent;
+  border: 1px solid #eba61b;
+  color: #eba61b;
+  padding: 6px;
+  font-family: inherit;
+  margin: 5px 0;
+}
+input[type="password"] {
+  background: transparent;
+  border: 1px solid #eba61b;
+  color: #eba61b;
+  padding: 6px;
+  font-family: inherit;
+  margin: 5px 0;
+}
+.account-box button {
+  background: #eba61b;
+  border: none;
+  color: #000000;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: audiowide, monospace;
+  display: block;
+  margin: 12px auto 0;
+}
+.account-box #message {
+  font-size: 14px;
+  color: #eba61b;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.expand {
+  background: transparent;
+  border: 1px solid #eba61b;
+  color: #eba61b;
+  padding: 6px;
+  font-family: inherit;
+  width: 100px;
+  transition: width 0.2s ease;
+}

@@ -35,6 +35,7 @@
         <a href="/gallery">Gallery</a>
         <a href="/about">About</a>
         <a href="/support">Support</a>
+        <a href="/login">Log In</a>
     </div>
     <h4 class="titlepath" id="typed-text" data-text="agent@framework:/usr/home/dailyshop"></h4>
   </header>

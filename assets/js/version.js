@@ -43,4 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.version = "1.5.0"; // Band-aid fix: Made a github actions workflow to update a github page with the shop data. Now the shop fetches from the github page instead of api.redfor.org. The reason for this is to have a static, unchanging file that never sleeps, speeding up load times and allowing for embeds no matter what.
 // window.version = "1.5.1"; // Added hi there gif. Also this is the day I found epic only drop on thursdays. monumental.
 // window.version = "1.5.2"; // Added Lightweight gif.
-window.version = "1.6.0"; // Monumental update. worthy of a version change. I GOT THE LAST NON LIMITED EPIC PLAYERCARD.
+// window.version = "1.6.0"; // Monumental update. worthy of a version change. I GOT THE LAST NON LIMITED EPIC PLAYERCARD.
+window.version = "1.6.1"; // Structured login and signup
