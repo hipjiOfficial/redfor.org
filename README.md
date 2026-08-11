@@ -10,6 +10,7 @@ redfor.org is a utitlity website created for players of the ROBLOX game Bombline
 
 ## Planned Features
 
+- Player Tracker: Enter a player's username and view their stats, equipped skin, equipped playercard, and level. 
 - LetMeKnow: Submit your discord username and a playercard to be automatically notified by the bot when your card is in the shop.
 - LiveMatches: See what matches are currently being played, including what map, and possibly any other information I might be able to scrape. 
 - CaseSim: Pop open cases without spending any coins. 
