@@ -35,7 +35,6 @@ const commonCards = [
     "Splatter.png",
     "Teal Star.png",
     "Timebomb.png",
-    "Vandalism.png",
     "Water Ops.png",
     "White Eye.png"
 ];
