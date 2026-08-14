@@ -37,3 +37,35 @@ autoGrow(password);
 
 //todo: move this to core maybe? 
 // also todo before i fotget: move the menu  card somwehere where it's consolidated, and doesnt need to be updated manually on every different page.
+
+// security clearance levels:
+// one star (agent)
+// every redfor agent begins somwhere.
+// - allows access to most redfor.org pages
+
+// two star (operative)
+// given once a discord account is attached to an account
+// - forums access
+// - let me know
+
+// three star (special agent)
+//
+
+// four star (special operative)
+// highest level of clearance for a regular field agent.
+
+// five star (senior special agent)
+// beginning of sepcialized redfor staff level clearance
+// - allowed to log the shop
+// - @redfor.org email to allow for official contact
+
+// six star (administrator)
+// - api clearance
+
+// six point five star (senior administrator)
+// second highest clearance. 
+// if a seven star should ever become incapacitated, the six point five is in reserve to take over seven star clearance.
+
+// seven star (director)
+// only one person is allowed to have seven star clearance at a time
+// - highest security clearance, oversees and is able to manipulate all redfor property
