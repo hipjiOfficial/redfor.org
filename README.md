@@ -3,6 +3,17 @@
 
 redfor.org is a utitlity website created for players of the ROBLOX game Bombline. Using this website, you can easily view Bombline information online that you would otherwise to join the game for.
 
+# attention!
+
+As you may know, redfor.org was spawned from the #daily-shop channel in the BOMBLINE official Discord. As of September 21st, 2026, the channel has been archived. All channels inside #bl-game-discussion were forcibly closed without warning. Due to this, there is no place for redfor.org to be posted daily. This was the biggest source of traffic, meaning it is now no longer viable to continue working on redfor.org. It is with sadness that I have to announce this news, but I knew it would come sooner or later. BOMBLINE was doomed from the beginning. redfor.org will no longer receive new features, nor will it continue to be maintained. This goes for all APIs associated with redfor.org as well. 
+
+Even if you’ve only ever looked at this site once in your life, I cannot thank you enough for taking the time to visit my project. I put a lot of effort and time into something I knew would have no return, but I did it for the love of the game. 
+
+If you are interested, please follow me to see more future hipji projects. 
+-hipji
+October 17th, 2026
+
+
 ## Current Features
 
 - Daily shop: Easily get the daily shop at any time. 
