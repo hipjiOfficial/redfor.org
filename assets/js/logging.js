@@ -183,3 +183,30 @@ populateCardDropdown("card1", true, "select first card");
 populateCardDropdown("card2", false, "select second card");
 populateCardDropdown("card3", false, "select third card");
 populateSkinDropdown("skin", "select skin");
+
+
+const values = [card1, card2, card3, skin];
+
+function getShopDate () {
+  const now = new Date();
+
+  const logDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() -1));
+  const yyyy = logDate.getUTCFullYear();
+  const mm = String(logDate.getUTCMonth() + 1).padStart(2, '0');
+  const dd = String(logDate.getUTCDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+console.log(getShopDate());
+
+submitLog = async () => {
+    const card1 = document.getElementById("card1").value;
+    const card2 = document.getElementById("card2").value;
+    const card3 = document.getElementById("card3").value;
+    const skin = document.getElementById("skin").value;
+    const date = getShopDate();
+    //console.log("card1: " + card1 + ", card2: " + card2 + ", card3: " + card3 + ", skin: " + skin + ", date: " + date);
+    const query = ' INSERT INTO shop_log (pc1, pc2, pc3, skin, date) VALUES (card1, card2, card3, skin, date)';
+    //console.log(query);
+}
+
