@@ -2,12 +2,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   margin: 0;
-  /*background-image: url('SiteImages/FadeBlackToGrey.png');*/
-  background-size: cover;
-  background-position: center;
+  padding-top: 100px;
+  box-sizing: border-box;
   background-color: #000000;
   color: #eba61b;
   font-family: monospace;
@@ -16,9 +15,10 @@ body {
 .homepage-content {
   border: 1px solid #eba61b;
   padding: 40px;
-  margin-top: 40px;
   align-self: center;
   width: 800px;
+  max-width: 100%;
+  box-sizing: border-box;
   display: block;
   margin: 0 auto;
   font-size: large;
@@ -27,12 +27,14 @@ body {
   font-weight: bold;
 }
 .homepage-navigation {
+  font-size: 20px;
   display: flex;
   gap: 20px;
   margin-top: 30px;
   align-items: flex-start;
   text-align: center;
 }
+
 .about-page-body {
   display: flex;
   flex-direction: column;
@@ -807,4 +809,20 @@ input[type="password"] {
   display: block;
   margin: 0 auto;
   font-size:15px;
+}
+.badnewsbox {
+  border: 1px solid #eba61b;
+  padding: 40px;
+  margin-top: 20px;
+  align-self: center;
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  font-size:15px;
+}
+.signature {
+  text-align: right;
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: audiowide, monospace;
 }
